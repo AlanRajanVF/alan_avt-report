@@ -1,6 +1,4 @@
 # Ambient Voice Technology
----
-
 <aside>
 💡
 
