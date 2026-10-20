@@ -32,13 +32,13 @@ Estimated timeline 4-5 days
 - Qualtrics → Data source
 - Quarto → Reporting
 
-### 4. What is the scope and goal?
+### 5. What is the scope and goal?
 
-#### 4.a Identify the questions that needs answered
+#### 5.a Identify the questions that needs answered
 
 Need to identify the current state of workload, clinical wellbeing and documentation activities across 4 sites + 6 clinical services before the introduction of AI scribe.
 
-#### 4.b Identify the goal
+#### 5.b Identify the goal
 
 To answers questions in the table below:
 
