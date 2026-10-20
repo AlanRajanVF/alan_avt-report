@@ -1,0 +1,249 @@
+---
+
+<aside>
+💡
+
+Four steps: Knowledge gap (problem definition) → Planning (what and why) → Analysis → Communication
+
+</aside>
+
+## Number 1 — Problem definition (the knowledge gap)
+
+<aside>
+💡
+
+Pin down who this is for and what question it must answer — in their words — before touching data.
+
+**Ask yourself:**
+
+- Who is the stakeholder — internal or external?
+- What exactly are they asking for? Can I restate the brief as a list of concrete deliverables?
+- What is the underlying goal the work serves (the meeting, the decision, the audience)?
+- **What is the single takeaway they need?** Name it now, not at the analysis stage.
+- **What could make part of this impossible, and what's my fallback?**
+</aside>
+
+### 1. Who are the stakeholders?
+
+- HIN SL
+- SWL Acute provider collaborative.
+
+### 2. What is the timeline?
+
+Estimated timeline 4-5 days
+
+| **Steps** | **Days** | **Date** |
+| --- | --- | --- |
+| Problem definition and planning | 0.5 |  |
+| Data prep and cleaning | 0.5 |  |
+| Pipeline in R and Analysis | 2 |  |
+| Linking Quarto and final assembly + QA | 1 |  |
+| Review and revisions | 0.5 |  |
+|  |  |  |
+
+### 3. What are the roles and responsibilities?
+
+| **Role** | **Person(s)** | **Responsibility** |
+| --- | --- | --- |
+| Project lead | Zoe M
+Hilary M | Responsible for data collection, involved in external stakeholder communications and does overall project management. |
+| Lead Data Analyst | Efejiro A | Responsible for overall Quant analysis and provides oversight to the Project Support and will sign-off the final report/findings. |
+| Project Support  | Alan R | Responsible for data extraction, cleaning, building pipeline on R and preliminary analysis. |
+
+### 4. Tech stack
+
+- R → ETL pipeline
+- Qualtrics → Data source
+- Quarto → Reporting
+
+### 4. What is the scope and goal?
+
+#### 4.a Identify the questions that needs answered
+
+Need to identify the current state of workload, clinical wellbeing and documentation activities across 4 sites + 6 clinical services before the introduction of AI scribe.
+
+#### 4.b Identify the goal
+
+To answers questions in the table below:
+
+| Questions to answer |  |  |  |
+| --- | --- | --- | --- |
+|  | People | Process | Technology |
+| Q4 |  | How is clinician time distributed across consultation activities? |  |
+| Q5 |  | How much burden is there in clinical documentations? |  |
+| Q16 |  |  | How easy or difficult is outpatient procedure coding without AI scribes? |
+| Q6 |  |  | What are the main documentation challenges clinicians currently face? |
+| Q7 | What is the emotional and wellbeing impact of clinical documentation? |  |  |
+| Q8 | How does clinical documentation affect work-life balance? |  |  |
+| Q9 | How much unpaid overtime is driven by documentation? | How much unpaid overtime is driven by documentation? |  |
+
+---
+
+## Number 2 — Planning
+
+<aside>
+💡
+
+*Decide what you're measuring and how, set up the workspace, and learn the subject before analysing it.*
+
+**Ask yourself:**
+
+- What am I measuring, and is the question about **comparison** (which is more/less — ANOVA, chi-square) or **relationship** (what causes what — regression)?
+- **Be honest about method.** Does this genuinely need inferential testing, or is it descriptive — counts, proportions, change? Most stakeholder briefs are descriptive, and the value is in the *disaggregation*, not the test.
+- What's my action list, and where does the work live (shared folder, version control)?
+- Do I understand the definitions — what the metric is, how its unit is built, its components, why people use it?
+- What reusable assets (palette, templates, code snippets) should I set up once and lock down?
+</aside>
+
+### Workflow and data pipeline
+
+```mermaid
+graph LR
+    A[Extract data from qualtrics] --> B[R pipeline] --Transform into useful format for 1 question --> C[Display on Quarto] --> D[Audit]
+    D --Repeat for other questions--> B
+
+```
+
+### Metric and analysis plan
+
+| Theme | People | Process | Technology |
+| --- | --- | --- | --- |
+| Objective | Who is experiencing workload and clinical wellbeing issues? | Focus on consultation time and workload? | Look at current workflow? |
+| Metric | Variation in demographics by trust,
+by clinical services,
+by occupational group | Time
+Effort
+Satisfaction | Difficulties
+Documentation challenges (free text)? |
+| Approach |  |  |  |
+|  |  |  |  |
+
+### What are we measuring AND OR What are the comparisons
+
+| Comparison / differences | Relations |
+| --- | --- |
+| Which is more or less | What causes / effects |
+| ANOVA, Chi-square | Regression |
+
+---
+
+## Number 3 — Analysis
+
+### Formulating the questions I wanted to answer:
+
+<aside>
+💡
+
+**When did it occur == Time**
+
+**Why something happens == Reason**
+
+**So what == Cause and effect**
+
+**Look for patterns**
+
+</aside>
+
+### Below are the question from the survey
+
+**Site info questions**
+
+**Q2 - Test sites:**
+
+- Croydon Health Services NHS Trust
+- Epsom and St Helier University Hospitals NHS Trust
+- Kingston and Richmond NHS Foundation Trust
+- St George’s University Hospitals NHS Foundation Trust
+
+**Q3 - Clinical speciality or service:**
+
+- Emergency department
+- Ear nose and throat
+- Gastroenterology
+- General surgery
+- Gynaecology
+- Respiratory medicine
+
+**Q15 - Occupational group**
+
+- Allied health professional
+- Medical (consultant, in training, specialist, clinical fellow)
+- Registered nurse and midwife
+- Nursing or healthcare assistant
+- Wider healthcare team (admin, clerical, central functions)
+- General management
+- Other
+
+**Consultation activities questions:**
+
+**Q4 - Based on your most recent consultation without an AI scribe, how many minutes (approximately) did you spend on the following:**
+
+How is clinician time distributed across consultation activities? Answers in minutes. ((PROCESS))
+
+- Direct patient care *(talking with, examining, or listening to the patient, with the patient as the primary focus and no multitasking)*
+- In‑consultation documentation with the patient present *(typing notes, placing orders, reviewing charts or scans, or other documentation activities)*
+- Administrative tasks immediately before or after the patient *(referrals, forms, discharge summaries, follow‑up documentation, reviewing results, telephone appointments, other pre or post consultation activities)* (3)
+- Further follow-up activities significantly after the consultation *(on your break, at the end of the clinic or outside of work hours)*
+
+**Q5- Agree/ disagree - For each statement, please select the option that best reflects your experience without an AI scribe. (6 point scale of Strongly disagree, Disagree, Neither agree not disagree, Agree, Strongly agree, Prefer not to answer)**
+
+How much burden is there in clinical documentations? ((PROCESS))
+
+- Completing clinical documentation is mentally demanding
+- I feel rushed or time pressured while completing the clinical documentation
+- I am satisfied with the quality of clinical documentation produced
+- Completing the clinical documentation requires a lot of effort to meet the required standard
+- I feel frustrated, stressed, or irritated while completing clinical documentation
+
+**Q16 - How easy or difficult is it to identify and apply the appropriate codes to outpatient procedures without an AI scribe?**
+
+How easy or difficult is outpatient procedure coding without AI scribes? ((TECH))
+Scales range needs to be confirmed
+
+- Very easy  (1)
+- Easy  (2)
+- Neither easy nor difficult  (3)
+- Difficult  (4)
+- Very difficult  (5)
+- Prefer not to answer  (6)
+
+**Q6 - What are the main challenges you face, if any, related to clinical documentation at this time without the use of an AI scribe? (Text)**
+
+What are the main documentation challenges clinicians currently face? ((TECH))
+
+**Clinical wellbeing questions:**
+
+**Q7- Please indicate how often each applies to you in relation to clinical documentation without an AI scribe. (6 point scale of Never, Rarely, Sometimes, Often, Always, Prefer not to answer)**
+
+What is the emotional and wellbeing impact of clinical documentation? ((PEOPLE))
+
+- How often, if at all, do you find clinical documentation emotionally exhausting? (1)
+- How often, if at all, do you feel burnt out because of clinical documentation tasks? (2)
+- How often, if at all, do you feel worn out at the end of your working day/shift because of clinical documentation? (3)
+- How often, if at all, do you not have enough energy for family and friends during leisure time due to clinical documentation? (4)
+- How often, if at all, do you log on to complete clinical documentation outside of your scheduled hours (e.g. before or after your shift, during breaks, or while on leave)? (5)
+
+**Q8 - I achieve a good balance between my work life and my home life without an AI scribe.**
+
+How does clinical documentation affect work-life balance? ((PEOPLE))
+
+- Strongly disagree (1)
+- Disagree (2)
+- Neither agree nor disagree (3)
+- Agree (4)
+- Strongly agree (5)
+- Prefer not to answer (6)
+
+**Q9 - On average, how many *additional* UNPAID hours do you work per week for this organisation, over and above your contracted hours without an AI scribe?  *This may include time worked before or after your scheduled hours, during breaks, on weekends, or while on leave.*** 
+
+How much unpaid overtime is driven by documentation? ((PEOPLE and PROCESS))
+
+- 0 hours (1)
+- Up to 5 hours (2)
+- 6–10 hours (3)
+- 11 or more hours (4)
+- Prefer not to answer (5)
+
+---
+
+## Number 4 — Communication
