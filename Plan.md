@@ -1,27 +1,6 @@
 # Ambient Voice Technology
-<aside>
-💡
-
-Four steps: Knowledge gap (problem definition) → Planning (what and why) → Analysis → Communication
-
-</aside>
 
 ## Number 1 — Problem definition (the knowledge gap)
-
-<aside>
-💡
-
-Pin down who this is for and what question it must answer — in their words — before touching data.
-
-**Ask yourself:**
-
-- Who is the stakeholder — internal or external?
-- What exactly are they asking for? Can I restate the brief as a list of concrete deliverables?
-- What is the underlying goal the work serves (the meeting, the decision, the audience)?
-- **What is the single takeaway they need?** Name it now, not at the analysis stage.
-- **What could make part of this impossible, and what's my fallback?**
-</aside>
-
 ### 1. Who are the stakeholders?
 
 - HIN SL
@@ -79,21 +58,6 @@ To answers questions in the table below:
 ---
 
 ## Number 2 — Planning
-
-<aside>
-💡
-
-*Decide what you're measuring and how, set up the workspace, and learn the subject before analysing it.*
-
-**Ask yourself:**
-
-- What am I measuring, and is the question about **comparison** (which is more/less — ANOVA, chi-square) or **relationship** (what causes what — regression)?
-- **Be honest about method.** Does this genuinely need inferential testing, or is it descriptive — counts, proportions, change? Most stakeholder briefs are descriptive, and the value is in the *disaggregation*, not the test.
-- What's my action list, and where does the work live (shared folder, version control)?
-- Do I understand the definitions — what the metric is, how its unit is built, its components, why people use it?
-- What reusable assets (palette, templates, code snippets) should I set up once and lock down?
-</aside>
-
 ### Workflow and data pipeline
 
 ```mermaid
@@ -127,22 +91,7 @@ Documentation challenges (free text)? |
 ---
 
 ## Number 3 — Analysis
-
 ### Formulating the questions I wanted to answer:
-
-<aside>
-💡
-
-**When did it occur == Time**
-
-**Why something happens == Reason**
-
-**So what == Cause and effect**
-
-**Look for patterns**
-
-</aside>
-
 ### Below are the question from the survey
 
 **Site info questions**
