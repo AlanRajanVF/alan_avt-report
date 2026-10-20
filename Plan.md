@@ -17,14 +17,12 @@ Estimated timeline 4-5 days
 | Pipeline in R and Analysis | 2 |  |
 | Linking Quarto and final assembly + QA | 1 |  |
 | Review and revisions | 0.5 |  |
-|  |  |  |
 
 ### 3. What are the roles and responsibilities?
 
 | **Role** | **Person(s)** | **Responsibility** |
 | --- | --- | --- |
-| Project lead | Zoe M
-Hilary M | Responsible for data collection, involved in external stakeholder communications and does overall project management. |
+| Project lead | Zoe M, Hilary M | Responsible for data collection, involved in external stakeholder communications and does overall project management. |
 | Lead Data Analyst | Efejiro A | Responsible for overall Quant analysis and provides oversight to the Project Support and will sign-off the final report/findings. |
 | Project Support  | Alan R | Responsible for data extraction, cleaning, building pipeline on R and preliminary analysis. |
 
@@ -72,14 +70,8 @@ graph LR
 | Theme | People | Process | Technology |
 | --- | --- | --- | --- |
 | Objective | Who is experiencing workload and clinical wellbeing issues? | Focus on consultation time and workload? | Look at current workflow? |
-| Metric | Variation in demographics by trust,
-by clinical services,
-by occupational group | Time
-Effort
-Satisfaction | Difficulties
-Documentation challenges (free text)? |
+| Metric | Variation in demographics by trust, by clinical services, by occupational group | Time, Effort, Satisfaction | Difficulties , Documentation challenges (free text)? |
 | Approach |  |  |  |
-|  |  |  |  |
 
 ### What are we measuring AND OR What are the comparisons
 
@@ -126,7 +118,7 @@ Documentation challenges (free text)? |
 
 **Q4 - Based on your most recent consultation without an AI scribe, how many minutes (approximately) did you spend on the following:**
 
-How is clinician time distributed across consultation activities? Answers in minutes. ((PROCESS))
+_How is clinician time distributed across consultation activities? Answers in minutes. ((PROCESS))_
 
 - Direct patient care *(talking with, examining, or listening to the patient, with the patient as the primary focus and no multitasking)*
 - In‑consultation documentation with the patient present *(typing notes, placing orders, reviewing charts or scans, or other documentation activities)*
@@ -135,7 +127,7 @@ How is clinician time distributed across consultation activities? Answers in min
 
 **Q5- Agree/ disagree - For each statement, please select the option that best reflects your experience without an AI scribe. (6 point scale of Strongly disagree, Disagree, Neither agree not disagree, Agree, Strongly agree, Prefer not to answer)**
 
-How much burden is there in clinical documentations? ((PROCESS))
+_How much burden is there in clinical documentations? ((PROCESS))_
 
 - Completing clinical documentation is mentally demanding
 - I feel rushed or time pressured while completing the clinical documentation
@@ -145,8 +137,8 @@ How much burden is there in clinical documentations? ((PROCESS))
 
 **Q16 - How easy or difficult is it to identify and apply the appropriate codes to outpatient procedures without an AI scribe?**
 
-How easy or difficult is outpatient procedure coding without AI scribes? ((TECH))
-Scales range needs to be confirmed
+_How easy or difficult is outpatient procedure coding without AI scribes? ((TECH))_
+_Scales range needs to be confirmed_
 
 - Very easy  (1)
 - Easy  (2)
@@ -157,13 +149,13 @@ Scales range needs to be confirmed
 
 **Q6 - What are the main challenges you face, if any, related to clinical documentation at this time without the use of an AI scribe? (Text)**
 
-What are the main documentation challenges clinicians currently face? ((TECH))
+_What are the main documentation challenges clinicians currently face? ((TECH))_
 
 **Clinical wellbeing questions:**
 
 **Q7- Please indicate how often each applies to you in relation to clinical documentation without an AI scribe. (6 point scale of Never, Rarely, Sometimes, Often, Always, Prefer not to answer)**
 
-What is the emotional and wellbeing impact of clinical documentation? ((PEOPLE))
+_What is the emotional and wellbeing impact of clinical documentation? ((PEOPLE))_
 
 - How often, if at all, do you find clinical documentation emotionally exhausting? (1)
 - How often, if at all, do you feel burnt out because of clinical documentation tasks? (2)
@@ -173,7 +165,7 @@ What is the emotional and wellbeing impact of clinical documentation? ((PEOPLE))
 
 **Q8 - I achieve a good balance between my work life and my home life without an AI scribe.**
 
-How does clinical documentation affect work-life balance? ((PEOPLE))
+_How does clinical documentation affect work-life balance? ((PEOPLE))_
 
 - Strongly disagree (1)
 - Disagree (2)
@@ -184,7 +176,7 @@ How does clinical documentation affect work-life balance? ((PEOPLE))
 
 **Q9 - On average, how many *additional* UNPAID hours do you work per week for this organisation, over and above your contracted hours without an AI scribe?  *This may include time worked before or after your scheduled hours, during breaks, on weekends, or while on leave.*** 
 
-How much unpaid overtime is driven by documentation? ((PEOPLE and PROCESS))
+_How much unpaid overtime is driven by documentation? ((PEOPLE and PROCESS))_
 
 - 0 hours (1)
 - Up to 5 hours (2)
