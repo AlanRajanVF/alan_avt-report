@@ -15,7 +15,7 @@ pacman::p_load(
 
 ## 1. Importing the data
 # Reading file
-raw_qualtrics_data <- read.csv("C:/Users/k2582493/Downloads/AI+scribe+pre-implementation+clinician+survey_October+8,+2026_20.42.csv")
+raw_qualtrics_data <- read.csv("C:/Users/k2582493/Downloads/AI+scribe+pre-implementation+clinician+survey_October+8,+2026_20.42.csv") ## Will make it pull data from a common source
 
 ## 2. Cleaning the data
 # Deleting Columns and rows
