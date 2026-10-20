@@ -1,7 +1,4 @@
 # Ambient Voice Technology
-
-[Briefing from Efe](Briefing%20from%20Efe%203f30ff23430780bf9abefec922b998a3.md)
-
 ---
 
 <aside>
